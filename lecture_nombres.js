@@ -2,7 +2,6 @@ const affichageUnites = document.getElementById('affichage-unites');
 const affichageDizaines = document.getElementById('affichage-dizaines');
 const affichageCentaines = document.getElementById('affichage-centaines');
 const affichageMelange = document.getElementById('affichage-melange');
-const checkBoxes = document.getElementById('form-group-voyelles');
 const titreNombres = document.getElementById('titre-nombres');
 
 //MODE CHIFFRES

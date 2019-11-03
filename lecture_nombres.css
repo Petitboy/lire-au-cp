@@ -1,0 +1,27 @@
+.titre {
+text-align: center;
+}
+
+#affichage-melange {
+font-size: 80px;
+}
+
+body {
+background-color: #ADD8E6;
+}
+
+#affichage-unites {
+background-color: #2E61FF;
+}
+
+#affichage-dizaines {
+background-color: #F8AD28;
+}
+
+#affichage-centaines {
+background-color: #33F124;
+}
+
+.form-group-chiffres, .affichage {
+font-size: 20px;
+}

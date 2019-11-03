@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="lecture_syllabes.css" rel="stylesheet" type="text/css">
+        <title>Lecture, les voyelles</title>
+    </head>
+
+<body>
+	<header class="titre">
+		<div><a href="lire_des_syllabes.ods" target="_blank" class="w3-button">Lire des Syllabes</a></div>
+		<div><h1>Lecture</h1></div>
+	</header>
+	<main>
+		<h2>Graphèmes Voyelles</h2>
+		<div class="form-group-voyelles">1 lettre
+				<input class="forme-check-input" type="checkbox" id="a">a
+				<input class="forme-check-input" type="checkbox" id="e">e
+				<input class="forme-check-input" type="checkbox" id="i">i
+				<input class="forme-check-input" type="checkbox" id="o">o
+				<input class="forme-check-input" type="checkbox" id="u">u
+				<input class="forme-check-input" type="checkbox" id="y">y
+				<input class="forme-check-input" type="checkbox" id="é">é
+				<input class="forme-check-input" type="checkbox" id="è">è
+				<input class="forme-check-input" type="checkbox" id="ê">ê
+		</div>
+		<div class="form-group-voyelles">2 lettres
+				<input class="forme-check-input" type="checkbox" id="ou">ou
+				<input class="forme-check-input" type="checkbox" id="oi">oi
+				<input class="forme-check-input" type="checkbox" id="ai">ai
+				<input class="forme-check-input" type="checkbox" id="ei">ei		
+				<input class="forme-check-input" type="checkbox" id="an">an
+				<input class="forme-check-input" type="checkbox" id="am">am
+				<input class="forme-check-input" type="checkbox" id="en">en
+				<input class="forme-check-input" type="checkbox" id="em">em
+				<input class="forme-check-input" type="checkbox" id="on">on
+				<input class="forme-check-input" type="checkbox" id="om">om
+				<input class="forme-check-input" type="checkbox" id="in">in
+				<input class="forme-check-input" type="checkbox" id="im">im
+				<input class="forme-check-input" type="checkbox" id="un">un
+		</div>
+		<div class="form-group-voyelles">3 lettres
+				<input class="forme-check-input" type="checkbox" id="ain">ain
+				<input class="forme-check-input" type="checkbox" id="ein">ein
+				<input class="forme-check-input" type="checkbox" id="oin">oin
+		</div>
+		<h2>Graphèmes Consonnes</h2>
+		<div class="form-group-consonnes">1 lettre				
+				<input class="forme-check-input" type="checkbox" id="b">b
+				<input class="forme-check-input" type="checkbox" id="c">c
+				<input class="forme-check-input" type="checkbox" id="d">d
+				<input class="forme-check-input" type="checkbox" id="f">f
+				<input class="forme-check-input" type="checkbox" id="g">g
+				<input class="forme-check-input" type="checkbox" id="h">h
+				<input class="forme-check-input" type="checkbox" id="j">j
+				<input class="forme-check-input" type="checkbox" id="k">k
+				<input class="forme-check-input" type="checkbox" id="l">l
+				<input class="forme-check-input" type="checkbox" id="m">m
+				<input class="forme-check-input" type="checkbox" id="n">n
+				<input class="forme-check-input" type="checkbox" id="p">p
+				<input class="forme-check-input" type="checkbox" id="q">q
+				<input class="forme-check-input" type="checkbox" id="r">r
+				<input class="forme-check-input" type="checkbox" id="s">s
+				<input class="forme-check-input" type="checkbox" id="t">t
+				<input class="forme-check-input" type="checkbox" id="v">v
+				<input class="forme-check-input" type="checkbox" id="w">w
+				<input class="forme-check-input" type="checkbox" id="x">x
+				<input class="forme-check-input" type="checkbox" id="z">z
+		</div>
+		<div class="form-group-consonnes">2 lettres
+				<input class="forme-check-input" type="checkbox" id="ph">ph
+				<input class="forme-check-input" type="checkbox" id="ch">ch
+				<input class="forme-check-input" type="checkbox" id="qu">qu
+		</div>
+		
+		<div class="affichage">
+			<p>Graphèmes Voyelles choisis :
+				<span id="affichage-voyelles"></span>
+			</p>
+			<p>Graphèmes Consonnes choisis :
+				<span id="affichage-consonnes"></span>
+			</p>
+			<button onclick="melanger(graphemes, affichageMelange)">Mélanger les graphèmes</button>
+			<button onclick="melangerSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Mélanger en syllabes</button>
+			<button onclick="lireDeuxSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire deux syllabes</button>
+			<button onclick="lireTroisSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire trois syllabes</button>
+			<button onclick="reset()">Mise à zéro</button>
+			<p>
+				<h3 id="titre-syllabes">Lire les graphèmes suivants : </h3>
+				<span id="affichage-melange"></span>	
+			</p>
+		</div>
+		
+	</main>	
+						
+	<script src="lecture_syllabes.js"></script>
+</body>
+
+</html>

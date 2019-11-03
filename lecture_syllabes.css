@@ -1,0 +1,23 @@
+.titre {
+text-align: center;
+}
+
+#affichage-melange {
+font-size: 80px;
+}
+
+#affichage-voyelles {
+background-color: #F1353E;
+}
+
+#affichage-consonnes {
+background-color: #0BBB0B;
+}
+
+body {
+background-color: #FFC0CB;
+}
+
+.form-group-voyelles, .form-group-consonnes, .affichage {
+font-size: 20px;
+}

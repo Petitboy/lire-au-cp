@@ -1,11 +1,17 @@
+/**************
+ *  VARIABLES *
+ **************/
+
 const affichageUnites = document.getElementById('affichage-unites');
 const affichageDizaines = document.getElementById('affichage-dizaines');
 const affichageCentaines = document.getElementById('affichage-centaines');
 const affichageMelange = document.getElementById('affichage-melange');
 const titreNombres = document.getElementById('titre-nombres');
 
-//MODE CHIFFRES
-
+/************
+ *  CHAINES *
+ ************/
+ 
 var unites = [];
 var dizaines = [];
 var centaines = [];
@@ -15,44 +21,33 @@ var baseIdUnites = ['zero', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sep
 var baseDizaines = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var baseIdDizaines = ['zero-dizaines', 'dix', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'soixante-dix', 'quatre-vingts', 'quatre-vingt-dix'];
 var baseCentaines = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-var baseIdCentaines = ['zero-centaines', 'cent', 'deux-cents', 'trois-cents', 'quatre-cents', 'cinq-cents', 
-'six-cents', 'sept-cents', 'huit-cents', 'neuf-cents'];
+var baseIdCentaines = ['zero-centaines', 'cent', 'deux-cents', 'trois-cents', 'quatre-cents', 'cinq-cents', 'six-cents', 'sept-cents', 'huit-cents', 'neuf-cents'];
 
-for (let i=0; i<baseUnites.length; i++) {
-	const x = document.getElementById(baseIdUnites[i]).addEventListener('change', ($event) => {
-		if ($event.target.checked) {
-			unites.push(baseUnites[i]);
-			affichageUnites.textContent = unites;
-		} else {
-			const index = unites.indexOf(baseUnites[i]);
-			unites.splice(index, 1);
-			affichageUnites.textContent = unites;}
-	});
+/*********************************************
+ *  FONCTION DE SELECTION DES CASES À COCHER *
+ *********************************************/
+ 
+function select (base, baseId, unit, affichage) {
+	for (let i=0; i<base.length; i++) {
+		const x = document.getElementById(baseId[i]).addEventListener('change', ($event) => {
+			if ($event.target.checked) {
+				unit.push(base[i]);
+				affichage.textContent = unit;
+			} else {
+				const index = unit.indexOf(base[i]);
+				unit.splice(index, 1);
+				affichage.textContent = unit;}
+		});
+	}
 }
 
-for (let i=0; i<baseDizaines.length; i++) {
-	const x = document.getElementById(baseIdDizaines[i]).addEventListener('change', ($event) => {
-		if ($event.target.checked) {
-			dizaines.push(baseDizaines[i]);
-			affichageDizaines.textContent = dizaines;
-		} else {
-			const index = dizaines.indexOf(baseDizaines[i]);
-			dizaines.splice(index, 1);
-			affichageDizaines.textContent = dizaines;}
-	});
-}
+select(baseUnites, baseIdUnites, unites, affichageUnites);
+select(baseDizaines, baseIdDizaines, dizaines, affichageDizaines);
+select(baseCentaines, baseIdCentaines, centaines, affichageCentaines);
 
-for (let i=0; i<baseCentaines.length; i++) {
-	const x = document.getElementById(baseIdCentaines[i]).addEventListener('change', ($event) => {
-		if ($event.target.checked) {
-			centaines.push(baseCentaines[i]);
-			affichageCentaines.textContent = centaines;
-		} else {
-			const index = centaines.indexOf(baseCentaines[i]);
-			centaines.splice(index, 1);
-			affichageCentaines.textContent = centaines;}
-	});
-}
+/************************
+ *  FONCTION DE MÉLANGE *
+ ************************/
 
 function melangerUnChiffre(donnees, affichage) {		
 	affichageMelange.textContent = " ";
@@ -94,6 +89,10 @@ function melangerTroisChiffres(donneesUnites, donneesDizaines, donneesCentaines,
 		}
 	}	
 }
+
+/****************************
+ *  FONCTION DE MISE À ZÉRO *
+ ****************************/
 
 function reset() {
 	var clist = document.getElementsByTagName("input");

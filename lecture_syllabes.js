@@ -1,49 +1,49 @@
+/**************
+ *  Variables *
+ **************/
+
 const affichageVoyelles = document.getElementById('affichage-voyelles');
 const affichageConsonnes = document.getElementById('affichage-consonnes');
 const affichageMelange = document.getElementById('affichage-melange');
 const checkBoxes = document.getElementById('form-group-voyelles');
 const titreSyllabes = document.getElementById('titre-syllabes');
 
-//MODE GRAPHEMES
-
 var graphemeVoyelles = [];
 var graphemeConsonnes = [];
 var graphemes = [];
 
-
 var baseVoyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'é', 'è', 'ê', 'ou', 'oi', 'ai', 'ei', 'an', 'am',
 'en', 'em', 'un', 'in', 'im', 'on', 'om', 'ain', 'ein', 'oin'];
-
-for (let i=0; i<baseVoyelles.length; i++) {
-	const x = document.getElementById(baseVoyelles[i]).addEventListener('change', ($event) => {
-		if ($event.target.checked) {
-			graphemeVoyelles.push(baseVoyelles[i]);
-			graphemes.push(baseVoyelles[i]);
-			affichageVoyelles.textContent = graphemeVoyelles;
-		} else {
-			const index = graphemeVoyelles.indexOf(baseVoyelles[i]);
-			graphemeVoyelles.splice(index, 1);
-			graphemes.splice(index, 1);
-			affichageVoyelles.textContent = graphemeVoyelles;}
-	});
-}
-
 var baseConsonnes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't',
 'v', 'w', 'x', 'z', 'ph', 'ch', 'qu'];
 
-for (let i=0; i<baseConsonnes.length; i++) {
-	const x = document.getElementById(baseConsonnes[i]).addEventListener('change', ($event) => {
-		if ($event.target.checked) {
-			graphemeConsonnes.push(baseConsonnes[i]);
-			graphemes.push(baseConsonnes[i]);
-			affichageConsonnes.textContent = graphemeConsonnes;
-		} else {
-			const index = graphemeConsonnes.indexOf(baseConsonnes[i]);
-			graphemeConsonnes.splice(index, 1);
-			graphemes.splice(index, 1);
-			affichageConsonnes.textContent = graphemeConsonnes;}
-	});
+/*******************************
+ *  FONCTION DE SÉLECTION ZÉRO *
+ *******************************/
+
+function select (base, grapheme, grapheme2, affichage) {
+	for (let i=0; i<base.length; i++) {
+		const x = document.getElementById(base[i]).addEventListener('change', ($event) => {
+			if ($event.target.checked) {
+				grapheme.push(base[i]);
+				grapheme2.push(base[i]);
+				affichage.textContent = grapheme;
+			} else {
+				const index = grapheme.indexOf(base[i]);
+				grapheme.splice(index, 1);
+				grapheme2.splice(index, 1);
+				affichage.textContent = grapheme;
+				}
+		});
+	}
 }
+
+select(baseVoyelles, graphemeVoyelles, graphemes, affichageVoyelles);
+select(baseConsonnes, graphemeConsonnes, graphemes, affichageConsonnes);
+
+/*******************************************************
+ *  FONCTION DE MELANGE, D'AFFICHAGE ET DE MISE À ZÉRO *
+ *******************************************************/
 
 function melanger(donnees, affichage) {		
 	affichageMelange.textContent = " ";
@@ -56,8 +56,6 @@ function melanger(donnees, affichage) {
 		affichageMelange.textContent += donnees[lettreAleatoire] + " ";}
 	}	
 }
-
-//MODE SYLLABES
 
 function melangerSyllabes(donneesVoyelles, donneesConsonnes, affichage) {		
 	affichageMelange.textContent = " ";

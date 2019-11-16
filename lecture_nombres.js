@@ -23,6 +23,27 @@ var baseIdDizaines = ['zero-dizaines', 'dix', 'vingt', 'trente', 'quarante', 'ci
 var baseCentaines = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var baseIdCentaines = ['zero-centaines', 'cent', 'deux-cents', 'trois-cents', 'quatre-cents', 'cinq-cents', 'six-cents', 'sept-cents', 'huit-cents', 'neuf-cents'];
 
+/***************************************
+* FONCTION DE CREATION DE CONTENU HTML *
+****************************************/
+function createNewInput (baseId, base, letterRow) {
+	for (let i=0; i<base.length; i++) {
+		var newInput = document.createElement('input');
+		newInput.type = 'checkbox';
+		newInput.id = baseId[i];
+		var newLabel = document.createElement('label');
+		newLabel.htmlFor = base[i];
+		newLabel.appendChild(document.createTextNode(base[i]));
+		document.getElementById(letterRow).appendChild(newInput);
+		document.getElementById(letterRow).appendChild(newLabel);
+	}	
+}
+
+createNewInput(baseIdUnites, baseUnites, 'form-group-unites');
+createNewInput(baseIdDizaines, baseDizaines, 'form-group-dizaines');
+createNewInput(baseIdCentaines, baseCentaines, 'form-group-centaines');
+
+
 /*********************************************
  *  FONCTION DE SELECTION DES CASES À COCHER *
  *********************************************/

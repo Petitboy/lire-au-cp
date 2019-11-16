@@ -5,21 +5,46 @@
 const affichageVoyelles = document.getElementById('affichage-voyelles');
 const affichageConsonnes = document.getElementById('affichage-consonnes');
 const affichageMelange = document.getElementById('affichage-melange');
-const checkBoxes = document.getElementById('form-group-voyelles');
 const titreSyllabes = document.getElementById('titre-syllabes');
 
 var graphemeVoyelles = [];
 var graphemeConsonnes = [];
 var graphemes = [];
 
-var baseVoyelles = ['a', 'e', 'i', 'o', 'u', 'y', 'é', 'è', 'ê', 'ou', 'oi', 'ai', 'ei', 'an', 'am',
-'en', 'em', 'un', 'in', 'im', 'on', 'om', 'ain', 'ein', 'oin'];
-var baseConsonnes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't',
-'v', 'w', 'x', 'z', 'ph', 'ch', 'qu'];
+var baseVoyellesUneLettre = ['a', 'e', 'i', 'o', 'u', 'y', 'é', 'è', 'ê'];
+var baseVoyellesDeuxLettres = ['ou', 'oi', 'ai', 'ei', 'an', 'am',
+'en', 'em', 'un', 'in', 'im', 'on', 'om', 'eu'];
+var baseVoyellesTroisLettres = ['ain', 'ein', 'oin', 'oeu'];
+var baseConsonnesUneLettre = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 
+'m', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z'];
+var baseConsonnesDeuxLettres = ['ph', 'ch', 'qu', 'br', 'cr', 'dr', 'fr', 'gr', 
+'pr', 'tr', 'vr', 'bl', 'cl', 'fl', 'gl', 'pl'];
 
-/*******************************
- *  FONCTION DE SÉLECTION ZÉRO *
- *******************************/
+/*****************************
+ * Fonction de creation html *
+ *****************************/
+function createNewInput (base, letterRow) {
+	for (let i=0; i<base.length; i++) {
+		var newInput = document.createElement('input');
+		newInput.type = 'checkbox';
+		newInput.id = base[i];
+		var newLabel = document.createElement('label');
+		newLabel.htmlFor = base[i];
+		newLabel.appendChild(document.createTextNode(base[i]));
+		document.getElementById(letterRow).appendChild(newInput);
+		document.getElementById(letterRow).appendChild(newLabel);
+	}	
+}
+
+createNewInput(baseVoyellesDeuxLettres, 'voyelles_deux_lettres');
+createNewInput(baseVoyellesUneLettre, 'voyelles_une_lettre');
+createNewInput(baseVoyellesTroisLettres, 'voyelles_trois_lettres');
+createNewInput(baseConsonnesUneLettre, 'consonnes_une_lettre');
+createNewInput(baseConsonnesDeuxLettres, 'consonnes_deux_lettres');
+
+/**************************
+ *  FONCTION DE SÉLECTION *
+ **************************/
 
 function select (base, grapheme, grapheme2, affichage) {
 	for (let i=0; i<base.length; i++) {
@@ -38,8 +63,11 @@ function select (base, grapheme, grapheme2, affichage) {
 	}
 }
 
-select(baseVoyelles, graphemeVoyelles, graphemes, affichageVoyelles);
-select(baseConsonnes, graphemeConsonnes, graphemes, affichageConsonnes);
+select(baseVoyellesUneLettre, graphemeVoyelles, graphemes, affichageVoyelles);
+select(baseVoyellesDeuxLettres, graphemeVoyelles, graphemes, affichageVoyelles);
+select(baseVoyellesTroisLettres, graphemeVoyelles, graphemes, affichageVoyelles);
+select(baseConsonnesUneLettre, graphemeConsonnes, graphemes, affichageConsonnes);
+select(baseConsonnesDeuxLettres, graphemeConsonnes, graphemes, affichageConsonnes);
 
 /*******************************************************
  *  FONCTION DE MELANGE, D'AFFICHAGE ET DE MISE À ZÉRO *

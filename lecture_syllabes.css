@@ -18,6 +18,6 @@ body {
 background-color: #FFC0CB;
 }
 
-.form-group-voyelles, .form-group-consonnes, .affichage {
+#voyelles_une_lettre, #voyelles_deux_lettres, #voyelles_trois_lettres, #consonnes_une_lettre, #consonnes_deux_lettres, .affichage {
 font-size: 20px;
 }

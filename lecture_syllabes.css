@@ -2,10 +2,6 @@
 text-align: center;
 }
 
-#affichage-melange {
-font-size: 80px;
-}
-
 #affichage-voyelles {
 background-color: #F1353E;
 }
@@ -18,6 +14,6 @@ body {
 background-color: #FFC0CB;
 }
 
-#voyelles_une_lettre, #voyelles_deux_lettres, #voyelles_trois_lettres, #consonnes_une_lettre, #consonnes_deux_lettres, .affichage {
+#voyelles_une_lettre, #voyelles_deux_lettres, #voyelles_trois_lettres, #consonnes_une_lettre, #consonnes_deux_lettres, #affichage {
 font-size: 20px;
 }

@@ -139,9 +139,9 @@ function reset() {
 	affichageVoyelles.textContent = " ";
 	affichageConsonnes.textContent = " ";
 	affichageMelange.textContent = " ";
-	graphemeConsonnes = [];
-	graphemeVoyelles = [];
-	graphemes = [];
+	graphemeConsonnes.splice(0, graphemeConsonnes.length);
+	graphemeVoyelles.splice(0, graphemeVoyelles.length);
+	graphemes.splice(0, graphemes.length);
 }
 
 

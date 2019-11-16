@@ -122,9 +122,9 @@ function reset() {
 	affichageDizaines.textContent = " ";
 	affichageUnites.textContent = " ";
 	affichageMelange.textContent = " ";
-	unites = [];
-	dizaines = [];
-	centaines = [];
+	unites.splice(0, unites.length);
+	dizaines.splice(0, dizaines.length);
+	centaines.splice(0, centaines.length);
 }
 
 

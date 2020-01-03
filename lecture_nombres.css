@@ -4,22 +4,31 @@ text-align: center;
 
 #affichage-melange {
 font-size: 80px;
+text-align: justify;
+margin: 20px;
 }
 
 body {
 background-color: #ADD8E6;
 }
 
-#affichage-unites {
-background-color: #2E61FF;
+#unites, #dizaines, #centaines, #unitesMille, #dizainesMille, #centainesMille {
+display: flex;
+flex-direction: row;
 }
 
-#affichage-dizaines {
-background-color: #F8AD28;
+#groupeMille, #groupeUnites {
+display: flex;
+flex-direction: column;
 }
 
-#affichage-centaines {
-background-color: #33F124;
+#ligne1 {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin: 20px;
 }
 
-
+button {
+width: 200px;
+}

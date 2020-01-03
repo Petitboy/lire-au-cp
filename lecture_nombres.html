@@ -8,34 +8,46 @@
     </head>
 
 <body>
-	<header>
-		<div><a href="lire_les_nombres.ods" target="_blank" class="w3-button">Lire les nombres</a></div>
-		<div><h1>Lire les Nombres</h1></div>
+	<header class="titre">
+		<div>
+			<h2><a href="lire_les_nombres.ods" target="_blank" class="w3-button">Lire les nombres</a></h2>
+			<button onclick="reset()">Mise à zéro</button>
+		</div>
 	</header>
 	<main>
-		<div id="form-group-unites">Unités				
-		</div>
 		
-		<div id="form-group-dizaines">Dizaines				
-		</div>
-		
-		<div id="form-group-centaines">Centaines				
-		</div>
-					
-		<div>
-			<p>Unités choisies : <span id="affichage-unites"></span></p>
-			<p>Dizaines choisies : <span id="affichage-dizaines"></span></p>
-			<p>Centaines choisies : <span id="affichage-centaines"></span></p>
-			
-			<button onclick="melangerUnChiffre(unites, affichageMelange)">Nombres à 1 chiffre</button>
-			<button onclick="melangerDeuxChiffres(unites, dizaines, affichageMelange)">Nombres à 2 chiffres</button>
-			<button onclick="melangerTroisChiffres(unites, dizaines, centaines, affichageMelange)">Nombres à 3 chiffres</button>			
-			<button onclick="reset()">Mise à zéro</button>
-			<p>
-				<h3 id="titre-nombres">Lire les nombres suivants :</h3>
-				<span id="affichage-melange"></span>	
-			</p>
-		</div>
+		<div id="ligne1">
+			<div id="groupeUnites">
+				<div id="unites">
+					<button onclick="melangerUnChiffre(unites, affichageMelange)">Unités</button>
+					<div id="form-group-unites"></div>
+				</div>
+				<div id="dizaines">
+					<button onclick="melangerDeuxChiffres(unites, dizaines, affichageMelange)">Dizaines</button>
+					<div id="form-group-dizaines"></div>
+				</div>
+				<div id="centaines">
+					<button onclick="melangerTroisChiffres(unites, dizaines, centaines, affichageMelange)">Centaines</button>
+					<div id="form-group-centaines"></div>
+				</div>
+			</div>
+			<div id="groupeMille">
+				<div id="unitesMille">
+					<button onclick="melangerQuatreChiffres(unites, dizaines, centaines, unitesMille, affichageMelange)">Mille</button>
+					<div id="form-group-unites-mille"></div>
+				</div>
+				<div id="unitesMille">
+					<button onclick="melangerCinqChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, affichageMelange)">Dix-mille</button>
+					<div id="form-group-dizaines-mille"></div>
+				</div>
+				<div id="unitesMille">
+					<button onclick="melangerSixChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, centainesMille, affichageMelange)">Cent-mille</button>
+					<div id="form-group-centaines-mille"></div>
+				</div>	
+			</div>
+		</div>			
+				
+		<p id="affichage-melange"></p>			
 		
 	</main>	
 						

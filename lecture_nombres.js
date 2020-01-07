@@ -32,11 +32,12 @@ var baseIdCentainesMille = ['zero-cent-mille', 'un-cent-mille', 'deux-cent-mille
 /***************************************
 * FONCTION DE CREATION DE CONTENU HTML *
 ****************************************/
-function createNewInput (baseId, base, letterRow) {
+function createNewInput (baseId, base, letterRow, name) {
 	for (let i=0; i<base.length; i++) {
 		var newInput = document.createElement('input');
 		newInput.type = 'checkbox';
 		newInput.id = baseId[i];
+		newInput.name = name;
 		var newLabel = document.createElement('label');
 		newLabel.htmlFor = base[i];
 		newLabel.appendChild(document.createTextNode(base[i]));
@@ -45,12 +46,12 @@ function createNewInput (baseId, base, letterRow) {
 	}	
 }
 
-createNewInput(baseIdUnites, baseUnites, 'form-group-unites');
-createNewInput(baseIdDizaines, baseDizaines, 'form-group-dizaines');
-createNewInput(baseIdCentaines, baseCentaines, 'form-group-centaines');
-createNewInput(baseIdUnitesMille, baseUnitesMille, 'form-group-unites-mille');
-createNewInput(baseIdDizainesMille, baseDizainesMille, 'form-group-dizaines-mille');
-createNewInput(baseIdCentainesMille, baseCentainesMille, 'form-group-centaines-mille');
+createNewInput(baseIdUnites, baseUnites, 'form-group-unites', 'units');
+createNewInput(baseIdDizaines, baseDizaines, 'form-group-dizaines', 'tens');
+createNewInput(baseIdCentaines, baseCentaines, 'form-group-centaines', 'hundreds');
+createNewInput(baseIdUnitesMille, baseUnitesMille, 'form-group-unites-mille', 'thousand');
+createNewInput(baseIdDizainesMille, baseDizainesMille, 'form-group-dizaines-mille', 'ten-thousand');
+createNewInput(baseIdCentainesMille, baseCentainesMille, 'form-group-centaines-mille', 'hundred-thousand');
 
 /*********************************************
  *  FONCTION DE SELECTION DES CASES À COCHER *
@@ -168,9 +169,9 @@ function melangerSixChiffres(donneesUnites, donneesDizaines, donneesCentaines, d
 	}	
 }
 
-/****************************
- *  FONCTION DE MISE À ZÉRO *
- ****************************/
+/*********************************************
+ *  FONCTION DE MISE À ZÉRO et selection tous*
+ *********************************************/
 
 function reset() {
 	var clist = document.getElementsByTagName("input");
@@ -183,6 +184,19 @@ function reset() {
 	dizainesMille.splice(0, dizainesMille.length);
 	centainesMille.splice(0, centainesMille.length);
 }
+
+function selectAll(nom, base, unit) {
+		checkboxes = document.getElementsByName(nom);
+		for (var i = 0; i < checkboxes.length; ++i) {checkboxes[i].checked = true;}
+			for (var i=0; i<base.length; ++i) {unit.push(base[i]);}			
+	}
+
+function selectNone(nom, base, unit) {
+		checkboxes = document.getElementsByName(nom);
+		for (var i = 0; i < checkboxes.length; ++i) {checkboxes[i].checked = false;}
+			for (var i=0; i<base.length; ++i) {unit.splice(0, base.length);}			
+	}
+
 
 
 

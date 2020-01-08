@@ -1,23 +1,54 @@
+@font-face {
+    font-family: 'cursive';
+    src: url('http://lire.au.cp.free.fr/fonts/Cursive_standard.ttf');
+   }
+   
 .titre {
 text-align: center;
 }
 
-#affichage-voyelles {
-background-color: #F1353E;
-}
-
-#affichage-consonnes {
-background-color: #0BBB0B;
-}
-
 #affichage-melange {
-    font-size: 80px;
+font-size: 80px;
+text-align: center;
 }
 
 body {
 background-color: #FFC0CB;
 }
 
-#voyelles_une_lettre, #voyelles_deux_lettres, #voyelles_trois_lettres, #consonnes_une_lettre, #consonnes_deux_lettres, #affichage {
+#voyelles_une_lettre, #voyelles_deux_lettres, #voyelles_trois_lettres,
+ #consonnes_une_lettre, #consonnes_deux_lettres, #CHKV1, #CHKV2, #CHKV3, #CHKC1, #CHKC2  {
 font-size: 20px;
+display: flex;
+flex-wrap: wrap;
+margin: 10px;
+border: 1px solid black;
+justify-content: center;
+background-color: #FFC0CB;
+}
+
+#letterCheck {
+display: flex;
+}
+
+#parametres {
+display: flex;
+flex-direction: column;
+}
+
+#voyelles, #consonnes {
+display: flex;
+border: 2px solid blue;
+margin: 5px;
+background-color: white;
+}
+
+.allNone {
+width: 80px;
+height: 30px;
+}
+
+#mixButtons {
+display: flex;
+justify-content: center;
 }

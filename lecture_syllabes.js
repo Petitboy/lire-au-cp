@@ -152,8 +152,11 @@ function selectNone(nom, base, unit, unit2) {
 		checkboxes = document.getElementsByName(nom);
 		for (var i = 0; i < checkboxes.length; ++i) {checkboxes[i].checked = false;}
 			for (var i=0; i<base.length; ++i) {
-				unit.splice(0, base.length);
-				unit2.splice(0, base.length);
-				}			
+				var graph = base[i];
+				if (unit2.includes(base[i])) {
+					var index = unit2.indexOf(base[i]);
+					unit2.splice(index, 1);}
+				}
+		unit.splice(0, base.length);			
 	}
 

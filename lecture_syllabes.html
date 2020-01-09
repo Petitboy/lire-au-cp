@@ -13,8 +13,19 @@
 	</header>
 	
 	<main>
+		
+		<div id="mixButtons">			
+			<button onclick="melanger(graphemes, affichageMelange)">Mélanger les graphèmes</button>
+			<button onclick="melangerSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Mélanger en syllabes</button>
+			<button onclick="lireDeuxSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire deux syllabes</button>
+			<button onclick="lireTroisSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire trois syllabes</button>
+			<button onclick="reset()">Mise à zéro</button>			
+		</div>
+		
 		<div id="parametres">
+			
 			<div id="voyelles">
+				<h3 style="text-align: center">Voyelles</h3>
 				<div id="voyelles_une_lettre">
 					<div id="CHKV1"></div>
 					<button class="allNone" onclick="selectAll('uneLettre', baseVoyellesUneLettre, graphemeVoyelles, graphemes)" class="boutonTous">Tous</button>
@@ -35,6 +46,7 @@
 			</div>
 			
 			<div id="consonnes">
+				<h3 style="text-align: center">Consonnes</h3>
 				<div id="consonnes_une_lettre">
 					<div id="CHKC1"></div>
 					<button class="allNone" onclick="selectAll('uneCons', baseConsonnesUneLettre, graphemeConsonnes, graphemes)" class="boutonTous">Tous</button>
@@ -49,13 +61,7 @@
 			</div>
 		</div>		
 		
-		<div id="mixButtons">			
-			<button onclick="melanger(graphemes, affichageMelange)">Mélanger les graphèmes</button>
-			<button onclick="melangerSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Mélanger en syllabes</button>
-			<button onclick="lireDeuxSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire deux syllabes</button>
-			<button onclick="lireTroisSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire trois syllabes</button>
-			<button onclick="reset()">Mise à zéro</button>			
-		</div>
+		
 		
 		<p id="affichage-melange"></p>
 		

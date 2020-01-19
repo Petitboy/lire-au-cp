@@ -2,10 +2,11 @@
  *  Variables *
  **************/
 
-const affichageVoyelles = document.getElementById('affichage-voyelles');
-const affichageConsonnes = document.getElementById('affichage-consonnes');
 const affichageMelange = document.getElementById('affichage-melange');
 const titreSyllabes = document.getElementById('titre-syllabes');
+const radioButton1 = document.getElementById('radioButton1');
+const radioButton2 = document.getElementById('radioButton2');
+const radioButton3 = document.getElementById('radioButton3');
 
 var graphemeVoyelles = [];
 var graphemeConsonnes = [];
@@ -94,7 +95,17 @@ function melangerSyllabes(donneesVoyelles, donneesConsonnes, affichage) {
 	for (compteur=0; compteur <60; compteur +=1) {
 		var voyelleAleatoire = Math.floor(Math.random() * donneesVoyelles.length);
 		var consonneAleatoire = Math.floor(Math.random() * donneesConsonnes.length);
-		affichageMelange.textContent += donneesConsonnes[consonneAleatoire] + donneesVoyelles[voyelleAleatoire] + " ";}
+		var syllabeAleatoire = Math.floor(Math.random() * 2);
+		if (radioButton1.checked == true)
+			affichageMelange.textContent += donneesConsonnes[consonneAleatoire] + donneesVoyelles[voyelleAleatoire] + " ";
+		else if (radioButton2.checked == true)
+			affichageMelange.textContent += donneesVoyelles[voyelleAleatoire] + donneesConsonnes[consonneAleatoire] + " ";
+		else if (radioButton3.checked == true)			
+			if (syllabeAleatoire === 1)
+				affichageMelange.textContent += donneesConsonnes[consonneAleatoire] + donneesVoyelles[voyelleAleatoire] + " ";
+			else
+				affichageMelange.textContent += donneesVoyelles[voyelleAleatoire] + donneesConsonnes[consonneAleatoire] + " ";
+		}
 	}	
 }
 
@@ -138,6 +149,7 @@ function reset() {
 	graphemeConsonnes.splice(0, graphemeConsonnes.length);
 	graphemeVoyelles.splice(0, graphemeVoyelles.length);
 	graphemes.splice(0, graphemes.length);
+	radioButton1.checked = "checked";
 }
 
 function selectAll(nom, base, unit, unit2) {

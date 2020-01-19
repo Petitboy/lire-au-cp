@@ -17,9 +17,24 @@
 		<div id="mixButtons">			
 			<button onclick="melanger(graphemes, affichageMelange)">Mélanger les graphèmes</button>
 			<button onclick="melangerSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Mélanger en syllabes</button>
+			<div id="syllablesOrder">
+				<div>
+					<input id="radioButton1" type="radio" checked="checked" name="orderType">
+					<label for="radioButton1">Normal</label>
+				</div>
+				<div>
+					<input id="radioButton2" type="radio" name="orderType">
+					<label for="radioButton2">Inversé</label>
+				</div>
+				<div>
+					<input id="radioButton3" type="radio" name="orderType">
+					<label for="radioButton3">Mixte</label>
+				</div>
+			</div>
 			<button onclick="lireDeuxSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire deux syllabes</button>
 			<button onclick="lireTroisSyllabes(graphemeVoyelles, graphemeConsonnes, affichageMelange)">Lire trois syllabes</button>
-			<button onclick="reset()">Mise à zéro</button>			
+			<button onclick="reset()">Mise à zéro</button>
+			
 		</div>
 		
 		<div id="parametres">

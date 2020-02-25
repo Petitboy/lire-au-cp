@@ -128,7 +128,7 @@ function melangerQuatreChiffres(donneesUnites, donneesDizaines, donneesCentaines
 		var nombreAleatoireDizaines = Math.floor(Math.random() * donneesDizaines.length);
 		var nombreAleatoireCentaines = Math.floor(Math.random() * donneesCentaines.length);
 		var nombreAleatoireUnitesMille = Math.floor(Math.random() * donneesUnitesMille.length);
-		affichageMelange.textContent += donneesUnitesMille[nombreAleatoireUnitesMille] + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
+		affichageMelange.textContent += donneesUnitesMille[nombreAleatoireUnitesMille] + "." + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
 		+ donneesUnites[nombreAleatoireUnites] + " ";
 		}
 	}	
@@ -145,7 +145,7 @@ function melangerCinqChiffres(donneesUnites, donneesDizaines, donneesCentaines, 
 		var nombreAleatoireCentaines = Math.floor(Math.random() * donneesCentaines.length);
 		var nombreAleatoireUnitesMille = Math.floor(Math.random() * donneesUnitesMille.length);
 		var nombreAleatoireDizainesMille = Math.floor(Math.random() * donneesDizainesMille.length);
-		affichageMelange.textContent += donneesDizainesMille[nombreAleatoireDizainesMille] + donneesUnitesMille[nombreAleatoireUnitesMille] + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
+		affichageMelange.textContent += donneesDizainesMille[nombreAleatoireDizainesMille] + donneesUnitesMille[nombreAleatoireUnitesMille] + "." + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
 		+ donneesUnites[nombreAleatoireUnites] + " ";
 		}
 	}	
@@ -163,7 +163,7 @@ function melangerSixChiffres(donneesUnites, donneesDizaines, donneesCentaines, d
 		var nombreAleatoireUnitesMille = Math.floor(Math.random() * donneesUnitesMille.length);
 		var nombreAleatoireDizainesMille = Math.floor(Math.random() * donneesDizainesMille.length);
 		var nombreAleatoireCentainesMille = Math.floor(Math.random() * donneesCentainesMille.length);
-		affichageMelange.textContent += donneesCentainesMille[nombreAleatoireCentainesMille] + donneesDizainesMille[nombreAleatoireDizainesMille] + donneesUnitesMille[nombreAleatoireUnitesMille] + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
+		affichageMelange.textContent += donneesCentainesMille[nombreAleatoireCentainesMille] + donneesDizainesMille[nombreAleatoireDizainesMille] + donneesUnitesMille[nombreAleatoireUnitesMille] + "." + donneesCentaines[nombreAleatoireCentaines] + donneesDizaines[nombreAleatoireDizaines] 
 		+ donneesUnites[nombreAleatoireUnites] + " ";
 		}
 	}	
@@ -183,6 +183,19 @@ function reset() {
 	unitesMille.splice(0, unitesMille.length);
 	dizainesMille.splice(0, dizainesMille.length);
 	centainesMille.splice(0, centainesMille.length);
+}
+
+function All() {
+	var clist = document.getElementsByTagName("input");
+	for (var i = 0; i < clist.length; ++i) { clist[i].checked = true; }
+	affichageMelange.textContent = " ";
+	for (var i=0; i<10; ++i) {
+		unites.push(baseUnites[i]);
+		dizaines.push(baseDizaines[i]);
+		centaines.push(baseCentaines[i]);
+		unitesMille.push(baseUnitesMille[i]);
+		dizainesMille.push(baseDizainesMille[i]);
+		centainesMille.push(baseCentainesMille[i]);}
 }
 
 function selectAll(nom, base, unit) {

@@ -11,7 +11,9 @@
 	<header class="titre">
 		<div>
 			<h2><a href="lire_les_nombres.ods" target="_blank" class="w3-button">Lire les nombres</a></h2>
-			<button onclick="reset()">Mise à zéro</button>
+			<button onclick="All()">Tout</button>
+			<button onclick="reset()">Rien</button>
+			
 		</div>
 	</header>
 	<main>
@@ -19,19 +21,19 @@
 		<div id="ligne1">
 			<div id="groupeUnites">
 				<div id="unites">
-					<button onclick="melangerUnChiffre(unites, affichageMelange)">Unités</button>
+					<button onclick="melangerUnChiffre(unites, affichageMelange)">1</button>
 					<div id="form-group-unites"></div>
 					<button onclick="selectAll('units', baseUnites, unites)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('units', baseUnites, unites)" class="boutonAucun">Aucun</button>
 				</div>
 				<div id="dizaines">
-					<button onclick="melangerDeuxChiffres(unites, dizaines, affichageMelange)">Dizaines</button>
+					<button onclick="melangerDeuxChiffres(unites, dizaines, affichageMelange)">10</button>
 					<div id="form-group-dizaines"></div>
 					<button onclick="selectAll('tens', baseDizaines, dizaines)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('tens', baseDizaines, dizaines)" class="boutonAucun">Aucun</button>
 				</div>
 				<div id="centaines">
-					<button onclick="melangerTroisChiffres(unites, dizaines, centaines, affichageMelange)">Centaines</button>
+					<button onclick="melangerTroisChiffres(unites, dizaines, centaines, affichageMelange)">100</button>
 					<div id="form-group-centaines"></div>
 					<button onclick="selectAll('hundreds', baseCentaines, centaines)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('hundreds', baseCentaines, centaines)" class="boutonAucun">Aucun</button>
@@ -39,19 +41,19 @@
 			</div>
 			<div id="groupeMille">
 				<div id="unitesMille">
-					<button onclick="melangerQuatreChiffres(unites, dizaines, centaines, unitesMille, affichageMelange)">Mille</button>
+					<button onclick="melangerQuatreChiffres(unites, dizaines, centaines, unitesMille, affichageMelange)">1.000</button>
 					<div id="form-group-unites-mille"></div>
 					<button onclick="selectAll('thousand', baseUnitesMille, unitesMille)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('thousand', baseUnitesMille, unitesMille)" class="boutonAucun">Aucun</button>
 				</div>
 				<div id="unitesMille">
-					<button onclick="melangerCinqChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, affichageMelange)">Dix-mille</button>
+					<button onclick="melangerCinqChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, affichageMelange)">10.000</button>
 					<div id="form-group-dizaines-mille"></div>
 					<button onclick="selectAll('ten-thousand', baseDizainesMille, dizainesMille)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('ten-thousand', baseDizainesMille, dizainesMille)" class="boutonAucun">Aucun</button>
 				</div>
 				<div id="unitesMille">
-					<button onclick="melangerSixChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, centainesMille, affichageMelange)">Cent-mille</button>
+					<button onclick="melangerSixChiffres(unites, dizaines, centaines, unitesMille, dizainesMille, centainesMille, affichageMelange)">100.000</button>
 					<div id="form-group-centaines-mille"></div>
 					<button onclick="selectAll('hundred-thousand', baseCentainesMille, centainesMille)" class="boutonTous">Tous</button>
 					<button onclick="selectNone('hundred-thousand', baseCentainesMille, centainesMille)" class="boutonAucun">Aucun</button>

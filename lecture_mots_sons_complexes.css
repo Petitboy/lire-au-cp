@@ -6,3 +6,9 @@ body {background-color: #F8F87A;}
 text-align: justify;
 margin: 20px;
 }
+
+.listes {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}

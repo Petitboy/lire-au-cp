@@ -14,16 +14,42 @@
 	
 	<main>
 		
-		
-		<div id="mots_en_k">
-			<div id="titre_mots_en_k">
-				<p><a href="../orthographe_lexicale/mots_en_c_qu_k.ods" target="_blank">Mots en [k] : c, k, qu, ch, q</a></p>
-			</div>			
-			<div id="boutons_mots_en_k">
-				<button onclick="afficher_listes(4)">listes</button>
-				<button onclick="melangerListes(mots_en_k)">Mélanger</button>
-			</div>						
+		<div class="listes">
+			<div class="categorie">
+				<div class="titres">
+					<p><a href="../orthographe_lexicale/mots_en_c_qu_k.ods" target="_blank">Mots avec c, k, qu, ch, q</a></p>
+				</div>			
+				<div class="boutons">
+					<button onclick="afficher_listes(listes_mots_avec_son_k, id_mots_en_k, 4); 
+					select(listes_mots_avec_son_k, id_mots_en_k, mots_selectionnes);">listes</button>
+					<button onclick="melangerListes(mots_selectionnes)">Mélanger</button>
+				</div>						
+			</div>
+			
+			<div class="categorie">
+				<div class="titres">
+					<p><a href="../orthographe_lexicale/mots_en_eu_oeu.ods" target="_blank">Mots avec eu, oeu</a></p>
+				</div>			
+				<div class="boutons">
+					<button onclick="afficher_listes(listes_de_mots_avec_sons_eu_oeu, id_mots_en_eu_oeu, 3); 
+					select(listes_de_mots_avec_sons_eu_oeu, id_mots_en_eu_oeu, mots_selectionnes);">listes</button>
+					<button onclick="melangerListes(mots_selectionnes)">Mélanger</button>
+				</div>						
+			</div>
+			
+			<div class="categorie">
+				<div class="titres">
+					<p><a href="../orthographe_lexicale/mots_en_o_au_eau.ods" target="_blank">Mots avec o, au, eau</a></p>
+				</div>			
+				<div class="boutons">
+					<button onclick="afficher_listes(listes_de_mots_avec_son_o, id_mots_en_o, 2);
+					select(listes_de_mots_avec_son_o, id_mots_en_o, mots_selectionnes);">listes</button>
+					<button onclick="melangerListes(mots_selectionnes)">Mélanger</button>
+				</div>						
+			</div>
+			
 		</div>
+		<p id="affichage-listes"></p>
 				
 		<p id="affichage-melange"></p>
 		

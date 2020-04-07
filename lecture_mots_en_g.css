@@ -1,0 +1,29 @@
+.titre, #button {
+text-align: center;
+}
+
+#affichage-melange {
+font-size: 50px;
+text-align: center;
+}
+
+body {
+background-color: #19F1E9;
+}
+
+h3 {
+text-align: center;
+}
+
+#input_bases {
+font-size: 20px;
+display: flex;
+margin: 10px;
+background-color: #19F1E9;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+#box {
+text-align: center;
+}

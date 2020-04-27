@@ -31,7 +31,8 @@ var mots_en_gen = ['les gens', 'gentil', 'sergent', 'argent', 'gigembre', 'agent
 'indulgent', 'genre', 'gentille', 'agence', 'urgence', 'gendarmerie', 'légendaire'];
 var mots_en_geo = ['bougeotte', 'rougeole', 'cageot', 'badigeonné', 'bourgeonné'];
 var mots_en_geoi = ['villageois', 'plongeoir', 'villageoise', 'mangeoire', 'nageoire', 'bourgeois'];
-var mots_en_geon = ['sauvageon', 'esturgeon'];
+var mots_en_geon = ['sauvageon', 'esturgeon', 'pigeon', 'bougeon', 'mangeons', 'plongeon', 'partageons', 'changeons', 'voyageons', 'mélangeons', 'corrigeons', 'chargeons', 
+'changeons', 'nageons', 'rangeons', 'protégeons', 'bougeons', 'plongeons', 'dérangeons', 'dirigeons', 'allongeons', 'interrogeons', 'chargeons'];
  var mots_en_gi = ['aubergine', 'écologie', 'gilet', 'bougie', 'fragile', 'rugir', 'imaginé', 'magie', 'gitan', 'girafon', 'rigide', 'imagine', 'magique', 
 'girafe', 'rougir', 'agiter', 'gigot', 'agir', 'gibier', 'origine', 'énergie', 'agile', 'régime', 'givre', 'original', 'logique', 'gifle', 'angine', 'giboulée', 
 'girolle', 'chirurgie', 'mugir', 'gigoter', 'allergie', 'fugitif', 'frigidaire'];

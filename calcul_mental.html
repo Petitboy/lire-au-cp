@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="calcul_mental.css" rel="stylesheet" type="text/css">
+        <title>Calcul Mental</title>
+    </head>
+
+<body>
+	
+	<h1><a href="calcul_addition_soustraction.ods" target="_blank">Calcul</a></h1>
+		<div id="parametres">
+			<div id="parametresGeneraux">
+				<div id="nombreCalculs" class="buttonSetupBox">
+					<label for="numberOfCalculs" id="numberOfCalculsTitle">nombre de calculs</label>
+					<input type="text" name="numberOfCalculs" id="numberOfCalculs" size="1">
+					<input type="submit" id="submitNumberOfCalculs" value="ok">
+					<span id="affichageNumberOfCalculs"></span>
+				</div>
+				<div id="buttonbox">
+					<button id="aideButton" onclick="aide()">Aide</button>
+					<button id="resetButton" onclick="reset()">Reset</button>
+					<button id="startButton" onclick="Start()">Start</button>			
+				</div>
+			</div>
+			<div id="premierNombre">
+				<p>Premier nombre</p>	
+				<div class="buttonSetupBox">					
+					<input type="text" name="number1min" id="number1min">
+					<input type="submit" id="submitnumber1min" value="ok" >
+					<span id="number1mintitle">min</span>
+					<span id="affichagenumber1min"></span>
+				</div>
+				<div class="buttonSetupBox">					
+					<input type="text" name="number1max" id="number1max">
+					<input type="submit" id="submitnumber1max" value="ok">
+					<span id="number1maxtitle">max</span>
+					<span id="affichagenumber1max"></span>
+				</div>
+			</div>		
+			<div id="secondNombre">
+				<p>Second nombre</p>
+				<div class="buttonSetupBox">					
+					<input type="text" name="number2min" id="number2min">
+					<input type="submit" id="submitnumber2min" value="ok">
+					<span id="number2mintitle">min</span>
+					<span id="affichagenumber2min"></span>
+				</div>
+				<div class="buttonSetupBox">					
+					<input type="text" name="number2max" id="number2max">
+					<input type="submit" id="submitnumber2max" value="ok">
+					<span id="number1maxtitle">max</span>
+					<span id="affichagenumber2max"></span>
+				</div>
+			</div>
+		</div>		
+				
+		<div id="informations">
+			<div id="boxScore">
+				<div><p id="affichageScoreTitle">Score</p></div>
+				<div><p id="affichageScore"></p></div>
+			</div>
+			<div id="boxCalculNumber">
+				<div><p id="affichageCountTitle">Calcul n°</p></div>
+				<div><p id="affichageCount"></p></div>
+			</div>
+			<div id="boxFin">
+				<div><p id="affichahgeFinTitle">Réussite : </p></div>
+				<div><p id="affichageFin"></p></div>
+			</div>						
+		</div>
+		<div id="reponseBox">
+			<label for="reponse" id="affichageCalcul"></label>
+			<input type="text" name="reponse" id="reponse" size="1">
+			<input type="submit" id="submit" value="?">
+		</div>
+		<p id="affichageAide">
+		1. Choisir le nombre de calculs et cliquer sur ok. Le bouton Start s'allume.<br>
+		2. On peut modifier la taille des nombres ou cliquer directement sur Start.<br>
+		3. Pour modifier la taille des nombres il faut choisir le minimum et le maximum de chacun d'eux.<br>
+		4. Vous ne pourrez pas choisir plus grand que 999 et Le maximum doit être supérieur au minimum.<br>
+		5. Les points s'affichent à gauche. Le pourcentage de réussite est le rapport entre le score et le nombre de calculs.<br>
+		6. Désactiver l'aide en appuyant sur Reset<br>
+		</p>
+
+	<script src="calcul_mental.js"></script>
+		
+</body>
+
+</html>

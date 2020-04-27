@@ -1,0 +1,182 @@
+body {
+background-color: #8AEEE7;
+display: flex;
+flex-direction: column;
+}
+
+h1 {
+text-align: center;
+margin: 0px;
+}
+
+#affichageAide {
+font-size: 19px;
+text-align: left;
+padding-left: 60px;
+color: #8AEEE7;
+}
+
+p {
+text-align: center;
+margin: 0px;
+}
+
+#parametres {
+display: flex;
+justify-content: space-evenly;
+margin: 10px;
+padding: 10px;
+}
+
+#parametresGeneraux {
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+width: 50%;
+}
+
+#buttonbox {
+display: flex;
+height: 50%;
+justify-content: center;
+}
+
+#resetButton, #startButton, #aideButton {
+width: 100px;
+height: 90%;
+margin: 5px;
+text-align: center;
+}
+
+#nombreCalculs {
+height: 50%;
+background-color: #B8EB6F;
+margin: 10px;
+font-size: 30px;
+}
+
+#premierNombre, #secondNombre {
+width: 25%;
+margin: 10px;
+background-color: #EAEE7E;
+}
+
+#affichageScore, #affichageCount, #affichageFin {
+width: 100px;
+text-align: left;
+}
+
+#affichageScoreTitle, #affichageCountTitle, #affichahgeFinTitle {
+width: 200px;
+text-align: right;
+}
+
+#informations {
+display: flex;
+justify-content: space-evenly;
+height: 60px;
+background-color: #FFC0CB;
+margin-left: 30px;
+margin-right: 30px;
+}
+
+#affichageCountTitle {
+width: 200px;
+}
+
+#boxScore, #boxCalculNumber, #boxFin {
+display: flex;
+justify-content: space-evenly;
+width: 30%;
+margin: 12px;
+padding: 2px;
+font-size: 30px;
+}
+
+#numberOfCalculsTitle {
+width: 300px;
+height: 30px;
+margin: 10px;
+text-align: center;
+padding: 4px;
+}
+
+#number1mintitle, #number1maxtitle, #number2mintitle, #number1maxtitle {
+width: 30px;
+height: 30px;
+margin: 10px;
+text-align: center;
+padding: 10px;
+}
+
+#number1min, #number1max, #number2min, #number2max, #numberOfCalculs {
+width: 40px;
+height: 30px;
+text-align: center;
+margin: 10px;
+}
+
+#submitnumber1min, #submitnumber1max, #submitnumber2min, #submitnumber2max, #submitNumberOfCalculs {
+width: 40px;
+height: 40px;
+text-align: center;
+margin: 10px;
+}
+
+#affichagenumber1min, #affichagenumber1max, #affichagenumber2min, #affichagenumber2max, #affichageNumberOfCalculs {
+width: 30px;
+height: 30px;
+text-align: center;
+margin: 10px;
+font-size: 30px;
+}
+
+.buttonSetupBox {
+display: flex;
+justify-content: center;
+height: 60px;
+}
+
+#reponseBox {
+display: flex;
+justify-content: space-between;
+margin: 0px 30px 0px 30px;
+}
+
+#affichageCalcul {
+width: 800px;
+height: 100px;
+font-size: 80px;
+margin:10px 0px 10px 0px;
+padding-right: 10px;
+text-align: right;
+background-color: #FFFFFF;
+}
+
+#reponse {
+width: 200px;
+height: 80px;
+font-size: 60px;
+margin: 15px;
+}
+
+#submit {
+width: 100px;
+height: 80px;
+font-size: 60px;
+margin: 20px 0px 20px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

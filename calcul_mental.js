@@ -203,20 +203,3 @@ function aide() {
 	affichageAide.style.color = "black";
 }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

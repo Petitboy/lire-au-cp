@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="calcul_mental_preset.css" rel="stylesheet" type="text/css">
+        <title>Calcul Mental</title>
+    </head>
+
+<body>
+	
+		<div id="titre">
+			<h1>Calcul</h1>
+			<button id="aideButton" onclick="aide()">Aide</button>
+			<button id="aideButton" onclick="reset()">Reset</button>
+		</div>		
+	
+		<div id="parametres">
+				
+				<div class="calculTypeBox">
+					<h2>Addition</h2>
+					<button id="addition1" onclick="addition1()">Niv1</button>
+					<button id="addition2" onclick="addition2()">Niv2</button>
+					<button id="addition3" onclick="addition3()">Niv3</button>
+					<button id="addition4" onclick="addition4()">Niv4</button>
+					<button id="addition5" onclick="addition5()">Niv5</button>
+					<button id="addition6" onclick="addition6()">Niv6</button>
+				</div>
+				
+				<div class="calculTypeBox">
+					<h2>Soustraction</h2>
+					<button id="soustraction1" onclick="soustraction1()">Niv1</button>
+					<button id="soustraction2" onclick="soustraction2()">Niv2</button>
+					<button id="soustraction3" onclick="soustraction3()">Niv3</button>
+					<button id="soustraction4" onclick="soustraction4()">Niv4</button>
+					<button id="soustraction5" onclick="soustraction5()">Niv5</button>
+				</div>
+			
+		</div>		
+				
+		<div id="informations">
+			<div id="boxScore">
+				<div><p id="affichageScoreTitle">Score</p></div>
+				<div><p id="affichageScore"></p></div>
+			</div>
+			<div id="boxCalculNumber">
+				<div><p id="affichageCountTitle">Calcul n°</p></div>
+				<div><p id="affichageCount"></p></div>
+			</div>
+			<div id="boxFin">
+				<div><p id="affichahgeFinTitle">Réussite : </p></div>
+				<div><p id="affichageFin"></p></div>
+			</div>						
+		</div>
+		<div id="reponseBox">
+			<label for="reponse" id="affichageCalcul"></label>
+			<input type="text" name="reponse" id="reponse" size="1">
+			<input type="submit" id="submit" value="?">
+		</div>
+		<p id="affichageResults"></p>
+		<p id="affichageAide">
+		Addition niv1 : 1 chiffre + 1 chiffre sans retenue.<br>
+		Addition niv2 : 1 chiffre + 1 chiffre avec retenue.<br>
+		Addition niv3 : 2 chiffres + 1 chiffre sans retenue.<br>
+		Addition niv4 : 2 chiffres + 1 chiffre avec retenue.<br>
+		Addition niv5 : 2 chiffres + 2 chiffres sans retenue.<br>
+		Addition niv6 : 2 chiffres + 2 chiffres avec retenue.<br>
+		Soustraction niv1 : 1 chiffre - 1 chiffre.<br>
+		Soustraction niv2 : 2 chiffres - 1 chiffre sans passage de la dizaine.<br>
+		Soustraction niv3 : 2 chiffres - 1 chiffre avec passage de la dizaine.<br>
+		Soustraction niv4 : 2 chiffres - 2 chiffres sans passage de la dizaine.<br>
+		Soustraction niv5 : 2 chiffres - 2 chiffres avec passage de la dizaine.<br>
+		</p>
+
+	<script src="calcul_mental_preset.js"></script>
+		
+</body>
+
+</html>

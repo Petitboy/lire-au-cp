@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="lecture_mots_en_ette.css" rel="stylesheet" type="text/css">
+        <title>Lire des mots</title>
+    </head>
+
+<body>
+	
+	<header class="titre">
+		<h2><a href="../orthographe_lexicale/mots_en_ette.ods" target="_blank" class="w3-button">Mots en er, es, ette, elle,...</a></h2>
+		<button onclick="All(sons, lesBases, mots)">Tout</button>
+		<button onclick="reset()">Rien</button>
+		<button onclick="aide()">Aide</button>
+		Listes conçues avec 
+		<a target="_blank" href="http://www.manulex.org"><button>MANULEX</button></a>
+	</header>
+	
+	<main>
+		
+		<div id="input_bases"></div>
+		
+		<div id="button"><button onclick="melanger(mots)">Mélanger</button></div>
+					
+		<div><p id="affichage-melange"></p></div>
+		
+	</main>	
+						
+	<script src="lecture_mots_en_ette.js"></script>
+</body>
+
+</html>

@@ -46,15 +46,14 @@ var mots_en_gou = ['cagoule', 'gourde', 'goutte', 'engourdi', 'kangourou', 'gour
 var mots_en_gue = ['pirogue', 'gueule', 'algue', 'langue', 'longue', 'marguerite', 'vague', 'figue', 'bague', 'conjugue', 'dialogue', 'fatigue', 'catalogue', 'marguerite', 
 'navigue', 'digue', 'orgue', 'seringue', 'meringue', 'collègue', 'fugue', 'mangue', 'dague', 'garrigue', 'tangue', 'dogue', 'blague', 'carlingue', 'dingue', 'voguer', 
 'irriguer', 'élaguer', 'larguer'];
-var mots_en_gui = ['guitare', 'guidon', 'guirlande', 'guide', 'guichet', 'gui', 'déguisement', 'aiguiser', 'déguiser', 'languir', ''];
+var mots_en_gui = ['guitare', 'guidon', 'guirlande', 'guide', 'guichet', 'gui', 'déguisement', 'aiguiser', 'déguiser', 'languir'];
 var mots_en_gy = ['gym', 'gymnase', 'gymnastique', 'gymnaste', 'gyroscope', 'égyptien'];
 
 var sons = ['ga', 'gai', 'gan', 'ge', 'gea', 'geai', 'gean', 'gé', 'gè', 'gen', 'geo', 'geoi', 'geon', 'gi', 'gin', 'go', 'gon', 'gou', 'gue', 'gui', 'gy'];
 var lesBases = [mots_en_ga, mots_en_gai, mots_en_gan, mots_en_ge, mots_en_gea, mots_en_geai, mots_en_gean, mots_en_gee, 
 mots_en_geee, mots_en_gen, mots_en_geo, mots_en_geoi, mots_en_geon, mots_en_gi, mots_en_gin, mots_en_go, mots_en_gon, 
 mots_en_gou, mots_en_gue, mots_en_gui, mots_en_gy];
-var lesNoms = ['name_ga', 'name_gai', 'name_gan', 'name_ge', 'name_gea', 'name_geai', 'name_gean', 'name_gee', 'name_geee', 'name_gen', 'name_geo', 
-'name_geoi', 'name_geon', 'name_gi', 'name_gin', 'name_go', 'name_gon', 'name_gou', 'name_gue', 'name_gui', 'name_gy', ];
+
 
 /*****************************
  * Fonction de creation html *

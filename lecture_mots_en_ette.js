@@ -7,15 +7,31 @@ const titreSyllabes = document.getElementById('titre-syllabes');
 
 var mots = [];
 
-var mots_en_f = ['histoire', 'ours', 'soleil', 'escalier', 'souris', 'sac', 'masque', 'sucre', 'salade', 'course', 'veste', 
-'salle', 'sapin', 'piste', 'réponse', 'poste', 'chanson', 'triste'];
-var mots_en_ff = ['maison', 'oiseau', 'télévision', 'besoin', 'cuisine', 'musique', 'chose', 'chemise', 'rose', 
-'poser', 'surprise', 'chaise', 'magasin', 'valise', 'visage', 'vase', 'pelouse', 'fusée'];
-var mots_en_ph = ['aussi', 'poisson', 'passer', 'dessin', 'classe', 'grosse', 's\'asseoir', 'maîtresse', 'assez', 'pousser', 'glisser', 
-'laisser', 'chaussure', 'hérisson', 'caisse', 'aussitôt', 'mousse', 'casser'];
+var mots_en_er = ['vers', 'verbe', 'exercice', 'personne', 'cherche', 'vert', 'derrière', 'observe', 'herbe', 'perdu', 'personnage', 'certain',
+'dernière', 'recherche', 'perdre', 'ferme', 'permet', 'verte', 'serpent', 'termine', 'mercredi', 'service', 'servir', 'aperçu', 'désert', 
+'merveille', 'anniversaire', 'liberté', 'dessert', 'envers', 'couverture', 'merci', 'vertical', 'terminaison', 'ouvert', 'traverser', 'cerf-volant', 'cerf', 
+'merle', 'super', 'caverne', 'divers', 'offert', 'perle', 'conversation', 'interdit', 'mer', 'persienne'];
+var mots_en_es = ['question', 'est-ce que', 'presque', 'reste', 'escalier', 'espace', 'descendre', 'des', 'les', 'mes', 'tes', 'ses', 
+'lesquels', 'esprit', 'espèce', 'correspondant', 'escargot', 'resta', 'veste', 'restaurant', 'geste', 'orchestre', 'estomac', 'ouest', 'respirer', 'espoir', 
+'sieste', 'majesté', 'respecter', 'respect', 'description', 'test'];
+var mots_en_ette = ['cette', 'lunette', 'jette', 'fillette', 'recette', 'assiette', 'bicyclette', 'toilette', 'baguette', 'casquette', 'chouette', 'trompette', 
+'allumette', 'cachette', 'vignette', 'charette', 'galette', 'noisette', 'étiquette', 'fourchette', 'chaussette', 'devinette', 'roulette', 'muette', 'sonnette', 
+'omelette', 'cassette', 'silhouette', 'serviette', 'violette', 'guette', 'crevette', 'raquette', 'mouette', 'alouette', 'navette', 'camionnette', 'belette', 
+'brouette', 'regrette', 'maisonnette', 'banquette', 'girouette'];
+var mots_en_elle = ['elle', 'quelle', 'belle', 'celle', 'nouvelle', 'laquelle', 'celle-ci', 'échelle', 'ficelle', 'nouvelle', 'hirondelle', 'lesquelles', 
+'voyelle', 'vaisselle', 'femelle', 'pelle', 'selle', 'mademoiselle', 'poubelle', 'coccinelle', 'celle-là', 'dentelle', 'gazelle', 'tourterelle', 'naturelle', 
+'sauterelle', 'chapelle', 'marelle', 'bretelle', 'jumelle', 'étincelle', 'semelle', 'maternelle', 'réelle', 'cervelle', 'ombrelle', 'rondelle', 'ruelle'];
+var mots_en_erre = ['terre', 'pierre', 'verre', 'guerre', 'tonnerre', 'serre', 'lierre', 'paratonnerre', 'parterre', 'enterrement', 'serre-tête', 
+'resserre', 'équerre', 'enserre', 'enterre', 'terre-plein'];
+var mots_en_esse = ['maîtresse', 'vitesse', 'princesse', 'adresse', 'dessert', 'cesse', 'tristesse', 'presse', 'dresse', 'jeunesse', 'intéresse', 'caresse', 'presse', 
+'sagesse', 'politesse', 'tendresse', 'promesse', 'paresse', 'redresse', 'richesse', 'kermesse', 'gentillesse', 'forteresse', 'hôtesse', 'détresse', 'faiblesse', 
+'souplesse', 'justesse', 'maladresse', 'sécheresse', 'vieillesse', 'délicatesse', 'presse-papiers', 'comtesse', 'tresse', 'finesse', 'déesse', 'ogresse'];
+var mots_en_enne = ['chienne', 'ennemi', 'ancienne', 'vienne', 'moyenne', 'antenne', 'mienne', 'sienne', 'prenne', 'devienne', 'renne', 'indienne', 'quotidienne', 
+'revienne', 'musicienne', 'benne', 'aérienne', 'apprenne', 'magicienne', 'européenne', 'prenne', 'reprenne', 'comprenne', 'obtienne', 'persienne', 'convienne', 
+'parvienne', 'végétarienne', 'alsacienne'];
 
-var sons = ['mots en f', 'mots en ff', 'mots en ph'];
-var lesBases = [mots_en_f, mots_en_ff, mots_en_ph];
+var sons = ['er', 'es', 'ette', 'elle', 'erre', 'esse', 'enne'];
+var lesBases = [mots_en_er, mots_en_es, mots_en_ette, mots_en_elle, mots_en_erre, mots_en_esse, mots_en_enne];
 
 /*****************************
  * Fonction de creation html *

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="lecture_mots_en_f_ff_ph.css" rel="stylesheet" type="text/css">
+        <title>Lire des mots</title>
+    </head>
+
+<body>
+	<header class="titre">
+		<div>
+			<h2><a href="../orthographe_lexicale/mots_en_f_ff_ph.ods" target="_blank" class="w3-button">Mots en f, ff, ph</a></h2>
+			<button onclick="All(sons, lesBases, mots)">Tout</button>
+			<button onclick="reset()">Rien</button>
+			<button onclick="aide()">Aide</button>
+			Listes conçues avec 
+			<a target="_blank" href="http://www.manulex.org"><button>MANULEX</button></a>
+		</div>
+	</header>
+	
+	<main>
+		
+		<div id="input_bases"></div>
+		
+		<div id="button"><button onclick="melanger(mots)">Mélanger</button></div>
+		
+		<p id="affichage-melange"></p>
+		
+	</main>	
+						
+	<script src="lecture_mots_en_f_ff_ph.js"></script>
+</body>
+
+</html>

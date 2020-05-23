@@ -3,30 +3,20 @@
  **************/
 
 const affichageMelange = document.getElementById('affichage-melange');
+const titreSyllabes = document.getElementById('titre-syllabes');
 
 var mots = [];
 
-var mots_en_ein = ['peinture', 'plein', 'ceinture', 'peindre', 'éteindre', 'frein', 'peintre', 'atteindre', 'sein', 'teint'];
-var mots_en_ain = ['maintenant', 'main', 'train', 'pain', 'demain', 'lendemain', 'bain', 'soudain', 'ainsi',
-  'copain', 'grain', 'nain', 'terrain', 'prochain', 'poulain', 'refrain', 'certain', 'vilain', 'maintenant', 'pain', 'crainte', 'saint', 'vainqueur', 
-  'romain', 'souterrain', 'lointain', 'plaindre', 'forain', 'plainte', 'métropolitain', 'humain', 'levain', 'américain'];
-var mots_en_ain_ein_aine_eine = ['vilain vilaine', 'un grain une graine', 'romain romaine', 'le frein il freine', 'plein pleine',
- 'Lorrain Lorraine', 'prochain prochaine'];
-var mots_en_in = ['jardin', 'matin', 'lapin', 'dessin', 'enfin', 'cinq', 'chemin', 'sapin', 'fin', 'magasin', 'prince', 'moulin', 'princesse', 
-'printemps', 'poussin', 'singe', 'cousin', 'installe', 'voisin', 'coussin', 'pinceau', 'brin', 'raisin', 'invité', 'indien', 'patin', 'requin', 'index', 
-'instant', 'dauphin', 'invente', 'vin', 'infirmière', 'quinze', 'pin', 'marin', 'engin', 'linge', 'médecin', 'vingt', 'pingouin', 'arlequin', 'pince', 'malin', 
-'gamin', 'interdit', 'bassin', 'insecte', 'dinde', 'ravin', 'malin', 'pantin', 'chagrin', 'juin', 'romarin', 'lutin', 'dindon', 'tambourin', 'mince', 'cintre', 
-'instituteur', 'tintamarre', 'indigo', 'pépin', 'inquiet', 'inscrire', 'câlin', 'taquin', 'instrument', 'sous-marin', 'brindille', 'invisible', 'satin', 'bulletin', 
-'incroyable', 'gourdin', 'cinquante', 'invasion', 'pétrin', 'lin', 'vaccin', 'inconnu', 'latin', ];
-var mots_en_im = ['grimpe', 'impossible', 'simple', 'imperméable', 'simplement', 'imprudent', 'important', 'impoli', 'imprimerie', 'chimpanzé', 'impasse', 
-'simplet', 'imbuvable', 'imbattable', 'timbre'];
-var mots_en_en_ien = ['bien', 'chien', 'rien', 'bientôt', 'gardien', 'combien', 'mien', 'pharmacien', 'indien', 'mécanicien', 'musicien', 'moyen', 'magicien', 'sien', 
-'examen', 'ancien', 'électricien', 'bohémien', 'lycéen', 'terrien', 'comédien', 'italien', 'parisien', ];
-var mots_en_oin = ['loin', 'point', 'coin', 'besoin', 'moins', 'soin', 'pointu', 'pointe', 'poing', 'foin', 'moindre', 'rejoindre', 'coincé', 'témoin', 
-'lointain', 'groin'];
+var mots_en_f = ['enfant', 'forêt', 'feu', 'fleur', 'fête', 'fille', 'fée', 'fenêtre', 'frère', 'oeuf', 'enfin', 
+'fort', 'fraise', 'neuf', 'faim', 'farine', 'fin', 'fantôme', 'café', 'foule', 'fer', 'fond', 'facile', 'confiture', 
+'four', 'girafe', 'boeuf', 'fourmi', 'femme', 'coffre', 'figure', 'fumée', 'froid', 'soif', 'flûte', 'ferme'];
+var mots_en_ff = ['difficile', 'coffre', 'affreux', 'affiche', 'souffle', 'offre', 'chiffon', 'coiffeur', 'effet', 
+'chauffeur', 'sifflet', 'affaire', 'chauffer', 'chiffre', 'différent', 'étoffe', 'buffet', 'couffin'];
+var mots_en_ph = ['éléphant', 'téléphone', 'photo', 'phrase', 'phoque', 'phare', 'pharmacie', 'pharmacien', 'dauphin', 
+'photographe', 'alphabet', 'téléphérique', 'catastrophe', 'nénuphar', 'saxophone', 'physique', 'strophe', 'géographie'];
 
-var sons = ['mots en in', 'mots en im', 'mots en ain', 'mots en ein', 'mots en oin', 'mots en ien en', 'mots en ain aine ein eine'];
-var lesBases = [mots_en_in, mots_en_im, mots_en_ain, mots_en_ein, mots_en_oin, mots_en_en_ien, mots_en_ain_ein_aine_eine];
+var sons = ['mots en f', 'mots en ff', 'mots en ph'];
+var lesBases = [mots_en_f, mots_en_ff, mots_en_ph];
 
 /*****************************
  * Fonction de creation html *
@@ -62,7 +52,7 @@ createNewInput(sons, lesBases, 'input_bases', 'buttons');
 /**************************
  *  FONCTION DE SÉLECTION *
  **************************/
- 
+
 function selectSons (sons, lesBases, mots) {
 	for (let i=0; i<sons.length; i++) {
 		const x = document.getElementById(sons[i]).addEventListener('change', ($event) => {
@@ -88,16 +78,16 @@ selectSons(sons, lesBases, mots);
  *  FONCTION DE MELANGE ET DE MISE À ZÉRO *
  *******************************************************/
 
-function melanger(donnees) {
+function melanger(donnees) {		
 	affichageMelange.textContent = " ";
 	if (donnees.length == 0) {
 		}
 		else {
-			for (compteur=0; compteur <20; compteur +=1) {
+			for (compteur=0; compteur < 20; compteur +=1) {
 				var lettreAleatoire = Math.floor(Math.random() * donnees.length);
 				affichageMelange.textContent += donnees[lettreAleatoire] + ", ";}
-		}
-	}
+		}	
+}
 
 function afficher(donnees) {		
 	affichageMelange.textContent = " ";
